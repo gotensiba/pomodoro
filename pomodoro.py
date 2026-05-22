@@ -120,6 +120,7 @@ class PomodoroTimer:
                     self.skip = True
                 elif ch == b'q':
                     self.quit = True
+            time.sleep(0.05)  # ビジーループを避けて CPU 使用率を抑える
 
     def run(self):
         enable_ansi()
